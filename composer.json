@@ -1,0 +1,44 @@
+{
+    "name": "Macavity/vue-to-twig-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Alexander Pape",
+            "email": "a.pape@paneon.de"
+        }
+    ],
+    "keywords": [
+        "symfony",
+        "bundle",
+        "vue",
+        "twig",
+        "service"
+    ],
+    "require": {
+        "php": ">=7.0",
+        "Macavity/php-vue-to-twig": "^0.2.0",
+        "symfony/framework-bundle": "~3.0|~4.0",
+        "psr/log": "~1.0",
+        "ext-dom": "*",
+        "symfony/console": "^4.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Macavity/php-vue-to-twig.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Macavity\\VueToTwigBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Macavity\\VueToTwigBundle\\Tests\\": "tests"
+        }
+    }
+}
