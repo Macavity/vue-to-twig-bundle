@@ -1,8 +1,10 @@
-<?php declare(strict_type=1);
+<?php declare(strict_types=1);
 
 namespace Macavity\VueToTwigBundle;
 
-class VueToTwigBundle
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class VueToTwigBundle extends Bundle
 {
 
 }

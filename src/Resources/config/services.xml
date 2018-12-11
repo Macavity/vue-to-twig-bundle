@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="true" />
+        <prototype namespace="Macavity\VueToTwigBundle\Command\" resource="../../Command/*" />
+        <service id="vuetotwig.compiler" class="Macavity\VueToTwig\Compiler"/>
+        <service id="vuetotwig.command.single" class="Macavity\VueToTwigBundle\Command\VueCompileSingleCommand">
+            <argument type="service" id="vuetotwig.compiler" />
+            <tag name="console.command" command="vuetotwig:single" />
+        </service>
+    </services>
+</container>

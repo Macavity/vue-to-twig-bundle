@@ -8,8 +8,10 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class VueCompileSingleCommand extends ContainerAwareCommand
+class VueCompileSingleCommand extends Command
 {
+    protected static $defaultName = 'vuetotwig:single';
+
     /**
      * @var VueToTwigCompiler
      */
@@ -17,7 +19,7 @@ class VueCompileSingleCommand extends ContainerAwareCommand
 
     public function __construct(VueToTwigCompiler $compiler)
     {
-        parent::__construct('vuetotwig:single');
+        parent::__construct();
 
         $this->compiler = $compiler;
     }
